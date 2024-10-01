@@ -1,85 +1,60 @@
 
 # SI4IoT: Integration Methodology for IoT Systems
+Visit the official project page for more details: [SI4IoT Project Page](https://acg.ual.es/repo/si4iot/).
 
 ## Description
-`SI4IoT` is a development environment for the integration of IoT systems using a Model-Driven Engineering (MDE) methodology. It allows modeling IoT applications through a Domain-Specific Language (DSL), enabling the automatic generation of software artifacts from developed models and the integration of heterogeneous hardware. This approach helps developers focus on the application’s business logic without dealing with the complexity of underlying platforms.
+`SI4IoT` (Service Integration for IoT) is a development environment that allows the graphical modeling of IoT systems using a Model-Driven Engineering (MDE) methodology. It provides an editor where users can design and integrate IoT systems, both software and hardware, and generate executable code automatically for various platforms. This approach helps developers focus on the application’s business logic without dealing with the complexity of underlying technologies. The tool is part of the [Applied Computing Group](https://acg.ual.es/).
 
 ## Project Structure
-The project follows an architecture divided into three main layers, each with a specific purpose and defined sub-levels for better organization:
+The project is structured into three main layers:
 
-1. **Physical Layer**: Contains models related to the hardware components that are part of the IoT devices.
-   - **Infrastructure Sublevel**: Defines network characteristics, servers, and connectivity.
-   - **Hardware Sublevel**: Describes the sensors, actuators, and controllers in the system.
-2. **Logical Layer**: Defines the system’s control logic and communication. This layer is responsible for service orchestration and the implementation of integration patterns.
-   - **Control Sublevel**: Includes the logic for device management, such as REST service orchestration and event management.
-   - **Interaction Sublevel**: Enables communication between the Physical and Application layers through RESTful APIs and lightweight messaging patterns (e.g., MQTT).
-3. **Application Layer**: Provides the necessary interfaces for the end user’s interaction with the system.
-   - **DTV Level**: Models the user interface for digital televisions.
-   - **Mobile Level**: Defines the user interface for mobile devices such as smartphones and tablets.
+1. **Physical Layer**: Models the hardware components, such as sensors and actuators.
+   - **Infrastructure Sublevel**: Specifies network characteristics and device connectivity.
+   - **Hardware Sublevel**: Defines sensors, actuators, and controllers.
+
+2. **Logical Layer**: Specifies control logic and communication between devices.
+   - **Control Sublevel**: Includes logic for REST services and event management.
+   - **Interaction Sublevel**: Manages communication between Physical and Application layers.
+
+3. **Application Layer**: Offers user interfaces for system interaction.
+   - **DTV Level**: Models the interface for digital television.
+   - **Mobile Level**: Defines interfaces for mobile devices.
 
 ## Key Features
-- **Layered Modeling**: The modular architecture allows the solution to be divided into layers, facilitating development and integration.
-- **Custom DSL**: Domain-Specific Language designed to abstract technological complexity and ease model development.
-- **M2T Transformations (Model-to-Text)**: Automatic transformation of models into functional source code, enabling software artifacts generation for multiple languages and platforms.
-- **Heterogeneous Component Integration**: Manages interoperability between IoT devices through RESTful APIs, MQTT, and other protocols.
-- **Multiplatform Support**: Software artifact generation for platforms such as Arduino, Node-Red, Android, NCL-Lua, and Ballerina.
-- **Extensive Documentation**: Detailed documentation on the methodology, DSL usage, and examples for its implementation in different contexts.
+- **Graphical Modeling**: Enables graphical definition of IoT systems through a custom DSL.
+- **M2T Transformations**: Automates code generation from models using Acceleo.
+- **Platform Integration**: Supports multiple platforms such as Arduino, Node-Red, Android, and Ballerina.
+- **Multiplatform Code Generation**: Generates code for sensors, REST services, and mobile interfaces.
+- **Extensive Documentation**: Provides detailed guidance for users.
 
 ## Installation
-1. Download and install **Eclipse IDE** with MDE-compatible tools.
-2. Install the following plugins in Eclipse:
-   - **Eclipse Modeling Framework (EMF)** for metamodel definitions.
-   - **Sirius** for graphical editor creation.
-   - **Acceleo** for Model-to-Text transformations (M2T).
-3. Clone this repository into your local environment:
+1. Download and install **Eclipse IDE** with the following plugins:
+   - **EMF (Eclipse Modeling Framework)** for metamodel management.
+   - **Sirius** for graphical model visualization.
+   - **Acceleo** for M2T transformations.
+2. Clone this repository:
 ```bash
 git clone https://github.com/acgtic211/si4iot
 ```
-4. Import the project into Eclipse (`File` -> `Import` -> `Existing Projects into Workspace`) and ensure all dependencies are correctly configured.
-
-## Basic Usage
-1. **Create a new Sirius project**: Open the Sirius graphical environment to define the different layers of the model.
-2. **Define the infrastructure**: Configure the elements of the infrastructure sublevel, such as network and node characteristics.
-3. **Model the hardware**: Add hardware components (sensors, actuators, controllers) and define them in the graphical editor.
-4. **Establish control logic**: Create the logical layer with REST service orchestration and define events for communication between devices.
-5. **Create the user interface**: Use the editor to design DTV and mobile interfaces.
-6. **Transform the model**: Generate the corresponding code using Acceleo for specific platforms (Arduino, Node-Red, Android, Ballerina, etc.).
-7. **Implementation and deployment**: Deploy the generated code on the corresponding platforms and perform the necessary testing.
+3. Import the project into Eclipse (`File` -> `Import` -> `Existing Projects into Workspace`).
+4. Open the `.aird` file for the Sirius editor and start defining the project models.
 
 ## Available Examples
-The repository includes examples to illustrate the implementation of the methodology in different contexts:
-
-- [Smart Home](examples/home_automation/): Implementation of a smart home environment with temperature sensors, lighting control, and remote monitoring.
-- [Industrial Automation](examples/industry/): Monitoring and control system in an industrial environment with heterogeneous devices.
-- [Smart Agriculture System](examples/agriculture/): IoT solution for monitoring environmental conditions and irrigation control in an agricultural setting.
-
-## Source Code Structure
-The code is organized into the following directories:
-
-- **`src/core/`**: Contains the base classes and core components for the integration architecture.
-- **`src/integration/`**: Modules for integration with various IoT technologies.
-- **`src/dsl/`**: DSL definitions and model-to-text (M2T) transformations.
-- **`src/application/`**: Specific elements for the applications' interaction with end-users.
-- **`docs/`**: Detailed documentation covering user guides, configuration, and reference manuals.
-- **`tests/`**: Scripts for unit and integration tests to validate the functionality of different system components.
+- **Smart Home**: Demonstrates home automation with lighting and temperature control. ([Diagram](https://acg.ual.es/repo/si4iot/examples/home_automation.png))
+- **Industrial Automation**: Shows industrial sensor integration. ([Diagram](https://acg.ual.es/repo/si4iot/examples/industry.png))
+- **Smart Agriculture**: Implements irrigation control using environmental data. ([Diagram](https://acg.ual.es/repo/si4iot/examples/agriculture.png))
 
 ## Related Articles
-The following research articles are closely related to the SI4IoT project:
-
-1. **A DSL for the Development of Heterogeneous Applications** - [DOI: 10.1109/FiCloudW.2017.108](https://doi.org/10.1109/FiCloudW.2017.108).
-2. **A Cross-Device Architecture for Modelling Authentication Features in IoT Applications** - [DOI: 10.3217/jucs-024-12-1758](https://doi.org/10.3217/jucs-024-12-1758).
-3. **IoTV: Merging DTV and MDE Technologies on the Internet of Things** - [DOI: 10.1007/978-3-030-11890-7-25](https://doi.org/10.1007/978-3-030-11890-7-25).
-4. **A model-driven approach for the integration of hardware nodes in the IoT** - [DOI: 10.1007/978-3-030-16181-1-75](https://doi.org/10.1007/978-3-030-16181-1-75).
-5. **RESTIoT: A model-based approach for building RESTful web services in IoT systems** - [DOI: 10.1007/s10586-020-03150-x](https://doi.org/10.1007/s10586-020-03150-x).
+- **"A DSL for the Development of Heterogeneous Applications"**: [DOI: 10.1109/FiCloudW.2017.108](https://doi.org/10.1109/FiCloudW.2017.108)
+- **"A Cross-Device Architecture for Modelling Authentication Features in IoT Applications"**: [DOI: 10.3217/jucs-024-12-1758](https://doi.org/10.3217/jucs-024-12-1758)
+- **"IoTV: Merging DTV and MDE Technologies on the Internet of Things"**: [DOI: 10.1007/978-3-030-11890-7-25](https://doi.org/10.1007/978-3-030-11890-7-25)
 
 ## Video Demonstrations
-- [Smart Home Video Demonstration](https://www.youtube.com/example_smart_home)
-- [Industrial Automation Video Demonstration](https://www.youtube.com/example_industrial_automation)
+- [System Setup Video](https://www.youtube.com/watch?v=_KkkUdqSMsU)
+- [Installation Tutorial](https://www.youtube.com/watch?v=MoC2mjMp_Aw)
+- [Tool Tutorial](https://www.youtube.com/watch?v=3VVa3Ib7ZLE)
 
-For more information about the research group behind this project, please visit the [ACG Research Group Website](https://acg.ual.es/).
-
-## Contributions
-Contributions are welcome. If you wish to collaborate, create a new *issue* to discuss improvements or bugs. You can also submit a *pull request* with the proposed solution.
+For more information, visit the official [SI4IoT Project Page](https://acg.ual.es/repo/si4iot/).
 
 ## License
-`SI4IoT` is distributed under the MIT license. Review the `LICENSE` file for more details.
+Distributed under the MIT License. See `LICENSE` for more information.
