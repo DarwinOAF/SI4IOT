@@ -63,11 +63,18 @@ The code is organized into the following directories:
 - **`docs/`**: Detailed documentation covering user guides, configuration, and reference manuals.
 - **`tests/`**: Scripts for unit and integration tests to validate the functionality of different system components.
 
+## Related Articles
+The following research articles are closely related to the SI4IoT project:
+
+1. **A DSL for the Development of Heterogeneous Applications** - 5th International Conference on Future Internet of Things and Cloud Workshops (FiCloudW), Prague, Czech Republic, 2017.
+2. **A Cross-Device Architecture for Modelling Authentication Features in IoT Applications** - Journal of Universal Computer Science, 2018.
+3. **IoTV: Merging DTV and MDE Technologies on the Internet of Things** - International Conference on Information Technology and Systems, Ecuador, 2019.
+4. **A model-driven approach for the integration of hardware nodes in the IoT** - World Conference on Information Systems and Technologies (WorldCist), Spain, 2019.
+5. **RESTIoT: A model-based approach for building RESTful web services in IoT systems** - XXIV Jornadas de Ingeniería del Software y Bases de Datos, Spain, 2019.
+6. **A model-driven engineering approach for the service integration of IoT systems** - Cluster Computing, 2020.
+
 ## Contributions
 Contributions are welcome. If you wish to collaborate, create a new *issue* to discuss improvements or bugs. You can also submit a *pull request* with the proposed solution.
 
 ## License
 `SI4IoT` is distributed under the MIT license. Review the `LICENSE` file for more details.
-```
-
-This complete `README.md` is now formatted and ready for direct use on GitHub. Let me know if there are additional changes you'd like to make.
