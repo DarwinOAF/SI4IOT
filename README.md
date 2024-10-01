@@ -66,12 +66,17 @@ The code is organized into the following directories:
 ## Related Articles
 The following research articles are closely related to the SI4IoT project:
 
-1. **A DSL for the Development of Heterogeneous Applications** - 5th International Conference on Future Internet of Things and Cloud Workshops (FiCloudW), Prague, Czech Republic, 2017.
-2. **A Cross-Device Architecture for Modelling Authentication Features in IoT Applications** - Journal of Universal Computer Science, 2018.
-3. **IoTV: Merging DTV and MDE Technologies on the Internet of Things** - International Conference on Information Technology and Systems, Ecuador, 2019.
-4. **A model-driven approach for the integration of hardware nodes in the IoT** - World Conference on Information Systems and Technologies (WorldCist), Spain, 2019.
-5. **RESTIoT: A model-based approach for building RESTful web services in IoT systems** - XXIV Jornadas de Ingeniería del Software y Bases de Datos, Spain, 2019.
-6. **A model-driven engineering approach for the service integration of IoT systems** - Cluster Computing, 2020.
+1. **A DSL for the Development of Heterogeneous Applications** - [DOI: 10.1109/FiCloudW.2017.108](https://doi.org/10.1109/FiCloudW.2017.108).
+2. **A Cross-Device Architecture for Modelling Authentication Features in IoT Applications** - [DOI: 10.3217/jucs-024-12-1758](https://doi.org/10.3217/jucs-024-12-1758).
+3. **IoTV: Merging DTV and MDE Technologies on the Internet of Things** - [DOI: 10.1007/978-3-030-11890-7-25](https://doi.org/10.1007/978-3-030-11890-7-25).
+4. **A model-driven approach for the integration of hardware nodes in the IoT** - [DOI: 10.1007/978-3-030-16181-1-75](https://doi.org/10.1007/978-3-030-16181-1-75).
+5. **RESTIoT: A model-based approach for building RESTful web services in IoT systems** - [DOI: 10.1007/s10586-020-03150-x](https://doi.org/10.1007/s10586-020-03150-x).
+
+## Video Demonstrations
+- [Smart Home Video Demonstration](https://www.youtube.com/example_smart_home)
+- [Industrial Automation Video Demonstration](https://www.youtube.com/example_industrial_automation)
+
+For more information about the research group behind this project, please visit the [ACG Research Group Website](https://acg.ual.es/).
 
 ## Contributions
 Contributions are welcome. If you wish to collaborate, create a new *issue* to discuss improvements or bugs. You can also submit a *pull request* with the proposed solution.
