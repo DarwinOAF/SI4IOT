@@ -1,19 +1,21 @@
 # SI4IoT User Manual
 
 ## Introduction
-`SI4IoT` (Service Integration for IoT) is a graphical development environment designed to integrate heterogeneous IoT systems using a Model-Driven Engineering (MDE) methodology. This user manual provides detailed steps on how to set up, model, and generate code for IoT systems using SI4IoT.
+`SI4IoT` (Service Integration for IoT) is a graphical development environment designed to integrate heterogeneous IoT systems using a **Model-Driven Engineering (MDE)** methodology. This manual provides detailed steps to set up, model, and generate code for IoT systems using SI4IoT.
 
 ## Prerequisites
-1. **Eclipse IDE**: Ensure that Eclipse IDE for Java and DSL Developers is installed.
-2. **Java Development Kit (JDK)**: Make sure JDK 8 or a compatible version is installed.
-3. **Git**: Install Git to clone the repository.
+Before starting, ensure the following tools are installed:
+
+1. **Eclipse IDE**: Download and install **Eclipse IDE for Java and DSL Developers**.
+2. **Java Development Kit (JDK)**: Install JDK 8 or a compatible version.
+3. **Git**: Install Git for version control.
 4. **Required Eclipse Plugins**:
-   - **EMF (Eclipse Modeling Framework)**: For defining and managing metamodels.
+   - **EMF (Eclipse Modeling Framework)**: For metamodel and model creation.
    - **Sirius**: To create graphical editors for the DSL models.
-   - **Acceleo**: For transforming models into code (M2T).
+   - **Acceleo**: For code generation using Model-to-Text transformations (M2T).
 
 ### Video Tutorials
-The following videos demonstrate how to set up the development environment, install the tool, and run a basic example:
+Refer to the following tutorials for a detailed guide:
 - [System Setup Video](https://www.youtube.com/watch?v=_KkkUdqSMsU)
 - [Installation Tutorial](https://www.youtube.com/watch?v=MoC2mjMp_Aw)
 - [Tool Example Tutorial](https://www.youtube.com/watch?v=3VVa3Ib7ZLE)
@@ -22,71 +24,61 @@ The following videos demonstrate how to set up the development environment, inst
 1. **Install the Required Plugins**:
    - Open Eclipse IDE.
    - Navigate to `Help` > `Eclipse Marketplace`.
-   - Search for and install the **EMF**, **Sirius**, and **Acceleo** plugins.
+   - Search for **EMF**, **Sirius**, and **Acceleo**, and install each plugin.
    - Restart Eclipse when prompted.
 
 2. **Clone the SI4IoT Repository**:
-   - Open a terminal or the Eclipse Git interface.
-   - Run the following command to clone the SI4IoT repository:
+   - Open a terminal or Eclipse Git interface.
+   - Run:
      ```bash
      git clone https://github.com/acgtic211/si4iot
      ```
-   - Alternatively, go to `File` > `Import` > `Git` > `Projects from Git` to import the repository directly into Eclipse.
+   - Or use `File` > `Import` > `Git` to import into Eclipse.
 
 3. **Import the Project into Eclipse**:
-   - In Eclipse, go to `File` > `Import`.
-   - Select `Existing Projects into Workspace`.
-   - Navigate to the directory where you cloned the repository and select the project.
-   - Click `Finish` to import the project into Eclipse.
+   - Go to `File` > `Import`.
+   - Choose `Existing Projects into Workspace`.
+   - Select the repository directory and import the project.
 
-4. **Open the Sirius Editor**:
-   - Open the `.aird` file found in the project to launch the Sirius editor.
-   - Use this editor to create graphical models for IoT systems, defining components across the Physical, Logical, and Application layers.
+4. **Launch the Sirius Editor**:
+   - Open the `.aird` file within the project structure.
+   - Start modeling the Physical, Logical, and Application layers using the graphical editor.
 
 ## Modeling a New IoT System
-### Step-by-Step Guide to Model a New System:
-1. **Define the Physical Layer**:
-   - Open the Sirius editor and define the IoT devices such as sensors and actuators.
-   - Use the `Physical Layer` to specify device connectivity and behavior.
-   - Add infrastructure details such as networks and servers for IoT communication.
+### Step-by-Step Guide
+1. **Physical Layer**:
+   - Model the hardware components: sensors, actuators, and controllers.
+   - Specify the connectivity and communication protocols.
 
-2. **Create the Logical Layer**:
-   - In the `Logical Layer`, define the control logic between devices.
-   - Add rules for data processing, control, and decision-making.
-   - Use REST services to connect devices with external systems.
+2. **Logical Layer**:
+   - Define the control logic for each device.
+   - Implement rules for data processing and decision-making.
 
-3. **Design the Application Layer**:
-   - Model the user interfaces for the system in the `Application Layer`.
-   - Use the provided tools to create UI components for mobile devices, TVs, and web interfaces.
-   - Ensure the model connects to the logical and physical components seamlessly.
+3. **Application Layer**:
+   - Model the user interfaces for DTV, mobile, and web applications.
+   - Ensure proper integration with the logical and physical layers.
 
 ## Code Generation and Deployment
-1. **Run the Acceleo Code Generation**:
-   - Right-click on the `.mtl` files (Acceleo scripts) and select `Run As` > `Acceleo Application`.
-   - Choose the input models and the destination folder where the code will be generated.
+1. **Run Acceleo Code Generation**:
+   - Right-click on the `.mtl` files and select `Run As` > `Acceleo Application`.
+   - Choose the input models and output directory.
 
 2. **Compile the Generated Code**:
-   - Depending on the platform (e.g., Arduino, Android), compile the generated code using the relevant IDE or tools.
-   - For Arduino, use the Arduino IDE to upload the generated `.ino` files to the board.
-   - For Android, open the generated code in Android Studio and build the APK.
+   - For Arduino, use the Arduino IDE to upload the `.ino` files.
+   - For Android, import the generated code in Android Studio.
 
 3. **Deploy the Solution**:
-   - Once the code is compiled, deploy it on the respective IoT devices (sensors, actuators, mobile apps, etc.).
-   - Verify the functionality of the devices and their interactions across the layers.
-
-## Example: Smart Home Automation
-To better understand the workflow, follow the example in the video: [Basic Example Tutorial](https://www.youtube.com/watch?v=3VVa3Ib7ZLE). This example demonstrates how to model and generate code for a smart home automation system, including lighting and temperature control using IoT devices.
+   - Deploy on target IoT devices and test system functionalities.
 
 ## Troubleshooting
 ### Common Issues:
 1. **Plugin Installation Issues**:
-   - Ensure all required plugins are installed. If errors occur, recheck the plugin versions and reinstall if necessary.
+   - Verify that all necessary plugins are correctly installed.
 
-2. **Model-to-Text Errors**:
-   - If the code generation fails, check that the input models are correct and the `.ecore` files are properly linked.
+2. **Code Generation Errors**:
+   - Ensure the models are consistent and correctly linked.
 
-3. **Deployment Issues**:
-   - Verify network connectivity and configuration when deploying to IoT devices.
-   - Ensure that the correct communication protocols (e.g., RESTful APIs or MQTT) are implemented.
+3. **Deployment Problems**:
+   - Confirm network configurations and device connectivity.
 
-By following this guide and referring to the video tutorials, you should be able to successfully model, generate, and deploy IoT systems using the SI4IoT environment.
+With this guide and the linked tutorials, you should be able to successfully model, generate, and deploy IoT systems using the SI4IoT environment.
