@@ -39,11 +39,6 @@ git clone https://github.com/acgtic211/si4iot
 3. Import the project into Eclipse (`File` -> `Import` -> `Existing Projects into Workspace`).
 4. Open the `.aird` file for the Sirius editor and start defining the project models.
 
-## Available Examples
-- **Smart Home**: Demonstrates home automation with lighting and temperature control. ([Diagram](https://acg.ual.es/repo/si4iot/examples/home_automation.png))
-- **Industrial Automation**: Shows industrial sensor integration. ([Diagram](https://acg.ual.es/repo/si4iot/examples/industry.png))
-- **Smart Agriculture**: Implements irrigation control using environmental data. ([Diagram](https://acg.ual.es/repo/si4iot/examples/agriculture.png))
-
 ## Related Articles
 - **"A DSL for the Development of Heterogeneous Applications"**: [DOI: 10.1109/FiCloudW.2017.108](https://doi.org/10.1109/FiCloudW.2017.108)
 - **"A Cross-Device Architecture for Modelling Authentication Features in IoT Applications"**: [DOI: 10.3217/jucs-024-12-1758](https://doi.org/10.3217/jucs-024-12-1758)
